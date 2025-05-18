@@ -1,5 +1,5 @@
 {
-    "name": "movie-ticket-reservation",
+    "name": "Movie Ticketing",
     "version": "1.0.0",
     "dependencies": {
         "@sendgrid/mail": "^7.4.0",
