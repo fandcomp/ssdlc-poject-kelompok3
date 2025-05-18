@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <title>Sistem Reservasi Tiket Film</title>
@@ -9,27 +9,27 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
 </head>
 <body>
-    <div id="auth">
-        <div id="login">
+    <div id="auth" class="container">
+        <div id="login" class="form-section">
             <h2>Login</h2>
-            <input type="email" id="login-email" placeholder="Email">
-            <input type="password" id="login-password" placeholder="Password">
-            <button onclick="login()">Login</button>
+            <input type="email" id="login-email" placeholder="Email" class="input-field">
+            <input type="password" id="login-password" placeholder="Password" class="input-field">
+            <button onclick="login()" class="btn">Login</button>
         </div>
-        <div id="register">
+        <div id="register" class="form-section">
             <h2>Register</h2>
-            <input type="email" id="register-email" placeholder="Email">
-            <input type="password" id="register-password" placeholder="Password">
-            <button onclick="register()">Register</button>
+            <input type="email" id="register-email" placeholder="Email" class="input-field">
+            <input type="password" id="register-password" placeholder="Password" class="input-field">
+            <button onclick="register()" class="btn">Register</button>
         </div>
     </div>
-    <div id="booking" style="display: none;">
-        <fieldset id="movie_booking">
+    <div id="booking" class="container" style="display: none;">
+        <fieldset id="movie_booking" class="form-section">
             <legend>Reservasi Tiket</legend>
             <p>
                 <label for="movie_name">Film</label>
-                <select id="movie_name" onchange="changeMovie_Img()">
-                    <option></option>
+                <select id="movie_name">
+                    <option value="">Pilih Film</option>
                     <option value="Terminator">Terminator</option>
                     <option value="Star Wars">Star Wars</option>
                     <option value="Star Trek">Star Trek</option>
@@ -38,7 +38,7 @@
             <p>
                 <label for="theaters">Ruang Bioskop</label>
                 <select id="theaters">
-                    <option></option>
+                    <option value="">Pilih Ruang</option>
                     <option value="Ruang Bioskop 1">Ruang Bioskop 1</option>
                     <option value="Ruang Bioskop 2">Ruang Bioskop 2</option>
                     <option value="Ruang Bioskop 3">Ruang Bioskop 3</option>
@@ -52,10 +52,10 @@
                 <label for="tickets_quantity">Jumlah Tiket</label>
                 <input type="number" name="tickets_quantity" id="tickets_quantity" min="1" />
             </p>
-            <input type="button" id="button1" value="Lihat Pesanan Anda" onclick="Main()" />
+            <input type="button" id="button1" value="Lihat Pesanan Anda" onclick="Main()" class="btn" />
         </fieldset>
         <p id="perTicketPrice">Harga per tiket = $ 5.00</p>
-        <fieldset id="movie_booked">
+        <fieldset id="movie_booked" class="form-section">
             <legend>Detail Pesanan</legend>
             <p>
                 <span style="color: #2779AA">Film yang Dipilih</span>
@@ -77,7 +77,7 @@
                 <span style="color: #2779AA">Total Harga</span>
                 <span id="total_price_view">(belum dipilih)</span>
             </p>
-            <input type="button" style="display: none" id="button2" value="Reservasi Tiket" onclick="myFunction()" />
+            <input type="button" style="display: none" id="button2" value="Reservasi Tiket" onclick="myFunction()" class="btn" />
         </fieldset>
     </div>
     <script type="text/javascript" src="main.js"></script>
