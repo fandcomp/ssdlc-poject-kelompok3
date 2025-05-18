@@ -1,0 +1,8 @@
+{
+    "name": "movie-ticket-reservation",
+    "version": "1.0.0",
+    "dependencies": {
+        "@sendgrid/mail": "^7.4.0",
+        "firebase-admin": "^9.4.2"
+    }
+}

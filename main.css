@@ -1,0 +1,44 @@
+html, body {
+    height: 100%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Arial", Helvetica, sans-serif;
+    background-color: #f8f9fa; /* Mengganti background hitam dan JPG dengan warna solid */
+}
+
+.card {
+    border: 1px solid #AED0EA;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #D7EBF9;
+}
+
+.card-header {
+    background: -webkit-linear-gradient(30deg, #2F8FC6, #000000 90%);
+    border-radius: 5px 5px 0 0;
+    color: #FF9A00;
+    font-size: 120%;
+    text-align: center;
+}
+
+.form-group label {
+    width: 30%;
+    text-align: right;
+    color: #2F8FC6;
+}
+
+.form-control {
+    width: 40%;
+    color: #2779AA;
+}
+
+#movie_name_booked, #theater, #date_booked, #email_booked, #tickets_booked, #total_price_view {
+    color: #AC2727;
+    text-align: center;
+}
+
+#perTicketPrice {
+    color: #27AC42;
+    text-align: center;
+}

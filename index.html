@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Sistem Reservasi Tiket Film</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+</head>
+<body>
+    <div id="auth">
+        <div id="login">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email">
+            <input type="password" id="login-password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+        <div id="register">
+            <h2>Register</h2>
+            <input type="email" id="register-email" placeholder="Email">
+            <input type="password" id="register-password" placeholder="Password">
+            <button onclick="register()">Register</button>
+        </div>
+    </div>
+    <div id="booking" style="display: none;">
+        <fieldset id="movie_booking">
+            <legend>Reservasi Tiket</legend>
+            <p>
+                <label for="movie_name">Film</label>
+                <select id="movie_name" onchange="changeMovie_Img()">
+                    <option></option>
+                    <option value="Terminator">Terminator</option>
+                    <option value="Star Wars">Star Wars</option>
+                    <option value="Star Trek">Star Trek</option>
+                </select>
+            </p>
+            <p>
+                <label for="theaters">Ruang Bioskop</label>
+                <select id="theaters">
+                    <option></option>
+                    <option value="Ruang Bioskop 1">Ruang Bioskop 1</option>
+                    <option value="Ruang Bioskop 2">Ruang Bioskop 2</option>
+                    <option value="Ruang Bioskop 3">Ruang Bioskop 3</option>
+                </select>
+            </p>
+            <p>
+                <label for="date">Tanggal</label>
+                <input type="date" id="date" />
+            </p>
+            <p>
+                <label for="tickets_quantity">Jumlah Tiket</label>
+                <input type="number" name="tickets_quantity" id="tickets_quantity" min="1" />
+            </p>
+            <input type="button" id="button1" value="Lihat Pesanan Anda" onclick="Main()" />
+        </fieldset>
+        <p id="perTicketPrice">Harga per tiket = $ 5.00</p>
+        <fieldset id="movie_booked">
+            <legend>Detail Pesanan</legend>
+            <p>
+                <span style="color: #2779AA">Film yang Dipilih</span>
+                <span id="movie_name_booked">(belum dipilih)</span>
+            </p>
+            <p>
+                <span style="color: #2779AA">Ruang Bioskop</span>
+                <span id="theater">(belum dipilih)</span>
+            </p>
+            <p>
+                <span style="color: #2779AA">Tanggal</span>
+                <span id="date_booked">(belum dipilih)</span>
+            </p>
+            <p>
+                <span style="color: #2779AA">Jumlah Tiket</span>
+                <span id="tickets_booked">(belum dipilih)</span>
+            </p>
+            <p>
+                <span style="color: #2779AA">Total Harga</span>
+                <span id="total_price_view">(belum dipilih)</span>
+            </p>
+            <input type="button" style="display: none" id="button2" value="Reservasi Tiket" onclick="myFunction()" />
+        </fieldset>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
